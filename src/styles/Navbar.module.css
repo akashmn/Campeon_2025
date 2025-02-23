@@ -19,7 +19,7 @@
 .navLinks a {
   color: #ffffff;
   text-decoration: none;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
 }
 
 .navLinks a::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -77,13 +77,13 @@
 }
 
 .logoText {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
   background: linear-gradient(90deg, #ff00c1, #00fff9);
-  background-clip: text; 
-  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
@@ -107,14 +107,13 @@
   z-index: 100;
 }
 
-
 .mobileMenu {
   display: none;
 }
 
 .mobileLink {
   color: #fff;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
