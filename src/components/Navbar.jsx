@@ -6,10 +6,17 @@ import styles from "../styles/Navbar.module.css";
 export default function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768); //remove later when the navbar is done
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth > 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -78,6 +85,9 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
+        {/* TO:DO- Add the thigs that are to be added in this div*/}
+        {/* remove this when the navbar is done */}
+        {isDesktop && <div style={{ width: "50px" }}></div>}
       </div>
     </nav>
   );
