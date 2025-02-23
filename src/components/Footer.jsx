@@ -4,6 +4,12 @@ import styles from "../styles/Footer.module.css";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll to top
+    });
+  };
 
   return (
     <footer className={styles.footer}>
@@ -35,6 +41,7 @@ export default function Footer() {
                 //animations
                 data-aos="fade-up"
                 data-aos-delay="200"
+                onClick={scrollToTop} // Scroll to top implemntd
               >
                 {link}
               </Link>
@@ -78,7 +85,12 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className={styles.copyright}>
+        <div
+          className={styles.copyright}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-offset="0"
+        >
           © {currentYear} <span>CAMPEON</span> • All rights reserved
         </div>
       </div>

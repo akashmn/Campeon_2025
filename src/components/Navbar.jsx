@@ -35,6 +35,14 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
@@ -53,6 +61,7 @@ export default function Navbar() {
               key={path}
               to={path}
               className={location.pathname === path ? styles.active : ""}
+              onClick={scrollToTop}
             >
               {label}
             </Link>

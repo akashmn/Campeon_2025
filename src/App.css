@@ -1,11 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-*{
-  padding:0;
-  margin:0;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-  font-family: 'Orbitron', sans-serif;
+body {
+  font-family: "Orbitron", sans-serif;
   background: #0a0a0a;
   color: #fff;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Dark gray background */
+  border-radius: 30px; /* Rounded edges */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #555; /* Medium gray color */
+  border-radius: 30px; /* Rounded edges */
+  border: 3px solid #2c2c2c; /* Add padding around the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Lighter gray on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #555 #2c2c2c; /* Thumb and track color */
 }
