@@ -16,18 +16,20 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    //scroling to top
+    window.scrollTo(0, 0);
+
     // Initialize AOS
     AOS.init({
       duration: 1000,
       once: false,
-      // offset: 200, // Trigger animation when the element is 200px from the viewport
     });
     //loading screen
     const timeOut = setTimeout(() => {
       setLoading(false);
     }, 2800); // Slightly longer to ensure glitch effect is visible
     return () => clearTimeout(timeOut);
-  }, []);
+  }, [Location]);
 
   return (
     <Router>
