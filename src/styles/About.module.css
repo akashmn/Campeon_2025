@@ -1,0 +1,151 @@
+.aboutContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    rgba(0,0,0,0.97), 
+    rgba(9,9,16,0.97)
+  ),
+  url('https://static.vecteezy.com/system/resources/previews/002/125/777/non_2x/abstract-sports-players-action-vector.jpg'); /* Add this image to your public folder */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  padding: 120px 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Add a subtle animated overlay */
+.aboutContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 0%,
+    rgba(0, 255, 249, 0.03) 40%,
+    rgba(255, 0, 193, 0.03) 60%,
+    transparent 100%
+  );
+  animation: pulseOverlay 8s ease-in-out infinite;
+}
+
+@keyframes pulseOverlay {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: transparent;
+  background: linear-gradient(90deg, #ff00c1, #00fff9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardIcon {
+  color: #00fff9;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(0,255,249,0.3));
+}
+
+.cardTitle {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.cardText {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.highlightSection {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 3rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #ff00c1, #00fff9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 100px 1rem 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .stats {
+    gap: 2rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+}
