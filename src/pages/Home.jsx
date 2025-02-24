@@ -1,5 +1,6 @@
 import Countdown from "../components/Countdown";
 import FAQ from "../components/FAQ";
+import LatestUpdates from "../components/notification";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
           <Countdown targetDate="2025-03-20T00:00:00" />
         </div>
       </div>
+      <LatestUpdates/>
       <FAQ />
     </>
   );
