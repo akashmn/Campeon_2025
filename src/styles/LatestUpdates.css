@@ -1,0 +1,223 @@
+.card{
+    display: flex;
+  flex-direction: column;
+}
+
+.score-card{
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+     
+}
+.mid{
+  display: flex;
+  justify-content: space-between;
+}
+.score-card-head{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+.latest-updates {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: transparent;
+    background: linear-gradient(90deg, #ff00c1, #00fff9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.updates-container {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.update-card {
+  background: linear-gradient(0deg, rgba(9, 9, 16, 0.98), rgba(0, 0, 0, 0.95));
+    color: white;
+    padding: 16px;
+    border: 1px solid #aaaaaa21;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 500px;
+}
+
+.update-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cricket-score{
+  padding: 5px;
+  border-radius: 5px;
+   background-color:#1c1c1c9d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cricket-end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.over{
+    font-size: 13px;
+}
+
+.runs{
+    font-weight: bolder;
+}
+
+.sport {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.view-more {
+    background: linear-gradient(90deg, #ff00c1, #00fff9);
+    margin-top: 20px;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-more:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 249, 0.3);
+}
+
+.time {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.match {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.venue {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.score {
+  padding: 5px;
+  border-radius: 5px;
+   background-color:#1c1c1c9d;
+    font-size: 20px;
+    font-weight: bolder;
+     
+}
+
+.winner {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.Tba{
+    width: 250px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    background-color: red;
+    color:white;
+}
+
+.on-going{
+    font-size: 14px;
+    padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+   background-color:#1c1c1c9d;
+}
+
+.lime {
+    color: lime;
+}
+
+.pink {
+    color: pink;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red{
+    color: #ff00c1;
+}
+
+.blue{
+    color: blue;
+}
+
+@media (max-width:749px) {
+    .update-card{
+        font-size: 13px;
+    }
+    .sport{
+        font-size: 13px;
+    }
+    .match{
+        font-size: 12px;
+    }
+    .winner{
+        font-size: 12px;
+    }
+    .cricket-score{
+        font-size: 13px;
+    }
+    .score{
+        font-size: 13px;
+    }
+    .on-going{
+        font-size: 13px;
+    }
+    .update-card{
+        min-width: 200px;
+    }
+    .Tba{
+        width: 200px;
+    }
+    .title{
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+}
