@@ -52,7 +52,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
         >
           <Trophy size={24} className={styles.trophy} />
-          <span className={styles.logoText}>CAMPEON</span>
+          <span className={styles.logoText}>CAMPION</span>
         </Link>
 
         <div className={styles.navLinks}>
