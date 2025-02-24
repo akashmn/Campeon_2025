@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <div className={styles.logoSection} data-aos="fade-up">
               <Trophy size={28} className={styles.trophy} />
-              <span className={styles.logoText}>CAMPEON</span>
+              <span className={styles.logoText}>CAMPION</span>
             </div>
             <p
               className={styles.logoDesc}
@@ -63,7 +63,7 @@ export default function Footer() {
               data-aos-delay="300"
             >
               <Mail size={14} className={styles.contactIcon} />
-              <span>contact@campeon.com</span>
+              <span>contact@campion.com</span>
             </div>
             <div
               className={styles.contactItem}
@@ -91,7 +91,7 @@ export default function Footer() {
           data-aos-delay="400"
           data-aos-offset="0"
         >
-          © {currentYear} <span>CAMPEON</span> • All rights reserved
+          © {currentYear} <span>CAMPION</span> • All rights reserved
         </div>
       </div>
     </footer>

@@ -1,11 +1,11 @@
-import { Link, Outlet } from 'react-router-dom';
-import styles from '../styles/Layout.module.css';
+import { Link, Outlet } from "react-router-dom";
+import styles from "../styles/Layout.module.css";
 
 export default function Layout() {
   return (
     <div className={styles.layout}>
       <nav className={styles.navbar}>
-        <div className={styles.logo}>CAMPEON</div>
+        <div className={styles.logo}>CAMPION</div>
         <div className={styles.navLinks}>
           <Link to="/">Home</Link>
           <Link to="/events">Events</Link>
@@ -13,7 +13,7 @@ export default function Layout() {
           <Link to="/faq">FAQ</Link>
         </div>
       </nav>
-      
+
       <main className={styles.main}>
         <Outlet />
       </main>
