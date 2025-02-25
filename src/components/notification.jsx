@@ -27,36 +27,36 @@ export default function LatestUpdates() {
                             </div>
                             <hr />
                             <div className="mid">
-                                <span className="match">{update.team1} VS {update.team2}</span>
+                                <span className="match">{update.team1} <div className="score-card">
+                                <span className="score-card-head">Score</span>
+                                {update.score && update.id !== 0 ? (
+                                    <span className="score">{update.score}</span>
+                                ) : update.score ? (
+                                    (() => {
+                                        let score = update.score.split(' | ');
+                                        let over = update.over.split(' | ');
+                                        return <div className="cricket-score">
+                                            <div className="cricket-end">
+                                                <span className="runs">{score[0]}</span>
+                                                <span className="over">{over[0]}</span>
+                                            </div>
+                                            <span>|</span>
+                                            <div className="cricket-end">
+                                                <span className="runs">{score[1]}</span>
+                                                <span className="over">{over[1]}</span>
+                                            </div>
+                                        </div>;
+                                    })()
+                                ) : (
+                                    <span className="on-going">VS</span>
+                                )
+
+                                }
+                            </div> {update.team2}</span>
                                 <span className="venue">{update.venue}</span>
                             </div>
-                            <div className="score-card">
-                            <span className="score-card-head">Score</span>
-                            {update.score && update.id !== 0 ? (
-                                <span className="score">{update.score}</span>
-                            ) : update.score ? (
-                                (() => {
-                                    let score = update.score.split(' | ');
-                                    let over = update.over.split(' | ');
-                                    return <div className="cricket-score">
-                                        <div className="cricket-end">
-                                            <span className="runs">{score[0]}</span>
-                                            <span className="over">{over[0]}</span>
-                                        </div>
-                                        <span>|</span>
-                                        <div className="cricket-end">
-                                            <span className="runs">{score[1]}</span>
-                                            <span className="over">{over[1]}</span>
-                                        </div>
-                                    </div>;
-                                })()
-                            ): (
-                                <span className="on-going">On Going...</span>
-                            )
                             
-                            }
-                        </div>
-                            {update.result ? <span className={`winner ${colors[update.id]}`}>Winner: {update.result}</span> : <span className="Tba">Will Be Announced Soon!</span>}
+                            {update.result ? <span className={`winner ${colors[update.id]}`}>Winner: {update.result}</span> : <span className="Tba">Winner Will Be Announced Soon!</span>}
                         </div>
 
                     </div>
