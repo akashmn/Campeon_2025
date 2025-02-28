@@ -4,6 +4,12 @@ import styles from "../styles/Footer.module.css";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll to top
+    });
+  };
 
   return (
     <footer className={styles.footer}>
@@ -13,7 +19,7 @@ export default function Footer() {
           <div>
             <div className={styles.logoSection} data-aos="fade-up">
               <Trophy size={28} className={styles.trophy} />
-              <span className={styles.logoText}>CAMPEON</span>
+              <span className={styles.logoText}>CAMPION</span>
             </div>
             <p
               className={styles.logoDesc}
@@ -35,6 +41,7 @@ export default function Footer() {
                 //animations
                 data-aos="fade-up"
                 data-aos-delay="200"
+                onClick={scrollToTop} // Scroll to top implemntd
               >
                 {link}
               </Link>
@@ -56,7 +63,7 @@ export default function Footer() {
               data-aos-delay="300"
             >
               <Mail size={14} className={styles.contactIcon} />
-              <span>contact@campeon.com</span>
+              <span>contact@campion.com</span>
             </div>
             <div
               className={styles.contactItem}
@@ -78,8 +85,13 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className={styles.copyright}>
-          © {currentYear} <span>CAMPEON</span> • All rights reserved
+        <div
+          className={styles.copyright}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-offset="0"
+        >
+          © {currentYear} <span>CAMPION</span> • All rights reserved
         </div>
       </div>
     </footer>

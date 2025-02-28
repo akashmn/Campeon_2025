@@ -1,5 +1,6 @@
 import Countdown from "../components/Countdown";
 import FAQ from "../components/FAQ";
+import LatestUpdates from "../components/notification";
 import styles from "../styles/Home.module.css";
 import About from "./About";
 
@@ -25,12 +26,13 @@ export default function Home() {
         </div>
 
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>CAMPEON</h1>
+          <h1 className={styles.title}>CAMPION</h1>
           <p className={styles.subtitle}>INTERCOLLEGE SPORTS TOURNAMENT</p>
           <Countdown targetDate="2025-03-20T00:00:00" />
         </div>
       </div>
       <About />
+      <LatestUpdates/>
       <FAQ />
     </>
   );

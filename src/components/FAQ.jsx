@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import styles from "../styles/FAQ.module.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const faqData = [
   {
@@ -31,6 +36,35 @@ const faqData = [
 ];
 
 export default function FAQ() {
+  //ANIMATION START
+  const textRef = useRef(null); // Ref for the text animation
+
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+    // Split the text into letters and wrap each letter in a <span>
+    const text = textRef.current;
+    const letters = text.innerText.split("");
+    text.innerHTML = letters
+      .map(
+        (letter, index) =>
+          `<span key=${index} style="opacity: 0;" class="animated-letter">${letter}</span>`
+      )
+      .join("");
+
+    // Create the scroll-based staggered animation
+    gsap.to(text.querySelectorAll(".animated-letter"), {
+      opacity: 1,
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: text,
+        start: "top 95%",
+        end: "top 50%",
+        scrub: !isMobile,
+      },
+    });
+  }, []);
+  //ANIMATION END
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -50,7 +84,9 @@ export default function FAQ() {
 
       <div className={styles.faqContainer}>
         {/* <h2>Faq</h2> */}
-        <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+        <h2 ref={textRef} className={styles.faqTitle}>
+          Frequently Asked Questions
+        </h2>
         <div
           className={styles.accordion}
           data-aos="fade-left"
