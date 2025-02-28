@@ -39,43 +39,42 @@ export default function About() {
           </div>
         </div>
 
-        {/*
-        <div className={styles.grid}></div>
-        <div className={styles.card}>
-          <Trophy className={styles.cardIcon} size={32} />
-          <h3 className={styles.cardTitle}>Excellence</h3>
-          <p className={styles.cardText}>
-            Showcasing the highest level of collegiate sports competition with
-            state-of-the-art facilities and professional organization.
-          </p>
-        </div>
+        <div className={styles.grid}>
+          <div className={styles.card}>
+            <Trophy className={styles.cardIcon} size={32} />
+            <h3 className={styles.cardTitle}>Excellence</h3>
+            <p className={styles.cardText}>
+              Showcasing the highest level of collegiate sports competition with
+              state-of-the-art facilities and professional organization.
+            </p>
+          </div>
 
-        <div className={styles.card}>
-          <Users className={styles.cardIcon} size={32} />
-          <h3 className={styles.cardTitle}>Community</h3>
-          <p className={styles.cardText}>
-            Building lasting connections between colleges and athletes,
-            fostering a spirit of healthy competition and camaraderie.
-          </p>
-        </div>
+          <div className={styles.card}>
+            <Users className={styles.cardIcon} size={32} />
+            <h3 className={styles.cardTitle}>Community</h3>
+            <p className={styles.cardText}>
+              Building lasting connections between colleges and athletes,
+              fostering a spirit of healthy competition and camaraderie.
+            </p>
+          </div>
 
-        <div className={styles.card}>
-          <Medal className={styles.cardIcon} size={32} />
-          <h3 className={styles.cardTitle}>Achievement</h3>
-          <p className={styles.cardText}>
-            Recognizing and rewarding outstanding athletic performance across
-            multiple sports disciplines.
-          </p>
-        </div>
+          <div className={styles.card}>
+            <Medal className={styles.cardIcon} size={32} />
+            <h3 className={styles.cardTitle}>Achievement</h3>
+            <p className={styles.cardText}>
+              Recognizing and rewarding outstanding athletic performance across
+              multiple sports disciplines.
+            </p>
+          </div>
 
-        <div className={styles.card}>
-          <Target className={styles.cardIcon} size={32} />
-          <h3 className={styles.cardTitle}>Vision</h3>
-          <p className={styles.cardText}>
-            Becoming the benchmark for collegiate sports events in India,
-            inspiring the next generation of athletes.
-          </p>
-        </div>
+          <div className={styles.card}>
+            <Target className={styles.cardIcon} size={32} />
+            <h3 className={styles.cardTitle}>Vision</h3>
+            <p className={styles.cardText}>
+              Becoming the benchmark for collegiate sports events in India,
+              inspiring the next generation of athletes.
+            </p>
+          </div>
           <div className={styles.card}>
             <MapPin className={styles.cardIcon} size={32} />
             <h3 className={styles.cardTitle}>Venue</h3>
@@ -83,17 +82,7 @@ export default function About() {
               Hosted at world-class facilities across Kerala, providing the perfect stage
               for exceptional sporting moments.
             </p>
-          </div>*/}
-        </div>
-        
-
-        <div className={styles.card}>
-          <MapPin className={styles.cardIcon} size={32} />
-          <h3 className={styles.cardTitle}>Venue</h3>
-          <p className={styles.cardText}>
-            Hosted at world-class facilities across Kerala, providing the
-            perfect stage for exceptional sporting moments.
-          </p>
+          </div>
         </div>
       </div>
     </div>
