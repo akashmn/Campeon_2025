@@ -1,39 +1,45 @@
-import { Trophy, Users, Medal, Target, Calendar, MapPin } from "lucide-react";
-import styles from "../styles/About.module.css";
+import { Trophy, Users, Medal, Target, Calendar, MapPin } from 'lucide-react';
+import styles from '../styles/About.module.css';
+import logo from "../assets/cec_logo_300.png"
 
 export default function About() {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.content}>
         <h1 className={styles.title}>About CAMPION</h1>
+        <div className={styles.innercontent}>
+          <div className={styles.highlightSection}>
+            <p className={styles.cardText}>
+            CAMPEON is Kerala's premier inter-college sports tournament, bringing together athletic talent from across the state in a celebration of sportsmanship, competition, and excellence. This highly anticipated event serves as a platform for students to showcase their skills, foster teamwork, and build lifelong connections through the spirit of sports.
+            With a diverse lineup of events, including County Cricket, 7's Football, Table Tennis, and Volleyball, CAMPEON provides an electrifying atmosphere where colleges compete for ultimate glory. The tournament is not just about winning—it’s about pushing limits, embracing challenges, and creating unforgettable moments on and off the field.
+            </p>
+            
+            <div className={styles.stats}>
+              <div className={styles.statItem}>
+                <div className={styles.statNumber}>20+</div>
+                <div className={styles.statLabel}>Colleges</div>
+              </div>
+              <div className={styles.statItem}>
+                <div className={styles.statNumber}>4</div>
+                <div className={styles.statLabel}>Sports</div>
+              </div>
+              <div className={styles.statItem}>
+                <div className={styles.statNumber}>500+</div>
+                <div className={styles.statLabel}>Athletes</div>
+              </div>
+              <div className={styles.statItem}>
+                <div className={styles.statNumber}>₹1L+</div>
+                <div className={styles.statLabel}>Prize Pool</div>
+              </div>
+            </div>
+          </div>
 
-        <div className={styles.highlightSection}>
-          <p className={styles.cardText}>
-            CAMPION is Kerala's premier inter-college sports tournament,
-            bringing together athletic talent from across the state in a
-            celebration of sportsmanship, competition, and excellence.
-          </p>
-
-          <div className={styles.stats}>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber}>20+</div>
-              <div className={styles.statLabel}>Colleges</div>
-            </div>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber}>4</div>
-              <div className={styles.statLabel}>Sports</div>
-            </div>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber}>500+</div>
-              <div className={styles.statLabel}>Athletes</div>
-            </div>
-            <div className={styles.statItem}>
-              <div className={styles.statNumber}>₹1L+</div>
-              <div className={styles.statLabel}>Prize Pool</div>
-            </div>
+          <div className={styles.logo}>
+            <img src={logo} alt="" />
           </div>
         </div>
 
+        {/*
         <div className={styles.grid}></div>
         <div className={styles.card}>
           <Trophy className={styles.cardIcon} size={32} />
@@ -70,15 +76,16 @@ export default function About() {
             inspiring the next generation of athletes.
           </p>
         </div>
-
-        <div className={styles.card}>
-          <Calendar className={styles.cardIcon} size={32} />
-          <h3 className={styles.cardTitle}>History</h3>
-          <p className={styles.cardText}>
-            Established with a vision to create a platform for collegiate
-            athletes to showcase their talents at a professional level.
-          </p>
+          <div className={styles.card}>
+            <MapPin className={styles.cardIcon} size={32} />
+            <h3 className={styles.cardTitle}>Venue</h3>
+            <p className={styles.cardText}>
+              Hosted at world-class facilities across Kerala, providing the perfect stage
+              for exceptional sporting moments.
+            </p>
+          </div>*/}
         </div>
+        
 
         <div className={styles.card}>
           <MapPin className={styles.cardIcon} size={32} />

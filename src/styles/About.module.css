@@ -21,6 +21,11 @@
   z-index: 2;
 }
 
+.innercontent {
+  display: flex;
+  align-items: center;
+}
+
 /* Add a subtle animated overlay */
 .aboutContainer::before {
   content: '';
@@ -46,8 +51,7 @@
 
 .title {
   font-size: 3rem;
-  text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: transparent;
   background: linear-gradient(90deg, #ff00c1, #00fff9);
   background-clip: text;
@@ -96,12 +100,16 @@
 }
 
 .highlightSection {
-  text-align: center;
-  margin: 4rem 0;
+  width: 60%;
+  margin: 2rem 0;
   padding: 3rem;
   background: rgba(0,0,0,0.3);
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  margin-left: 50px;
 }
 
 .stats {
@@ -139,6 +147,7 @@
 
   .title {
     font-size: 2rem;
+    text-align: center;
   }
 
   .stats {
@@ -147,5 +156,9 @@
 
   .statNumber {
     font-size: 2rem;
+  }
+
+  .innercontent {
+    flex-direction: column;
   }
 }
