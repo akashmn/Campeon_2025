@@ -18,8 +18,7 @@ const eventsData = [
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
     date: "March 20-22, 2025",
     venue: "Main Ground",
-    image:
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1470&h=800",
+    image: "/images/football.jpeg",
     teamSize: "7 players + 3 substitutes",
     prizePool: "₹50,000",
     schedule: "9:00 AM - 6:00 PM",
@@ -84,8 +83,7 @@ const eventsData = [
       "Inter-college volleyball championship with group stages and knockout rounds.",
     date: "March 22-23, 2025",
     venue: "Volleyball Court",
-    image:
-      "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=1470&h=800",
+    image: "/images/vollyball.jpeg",
     teamSize: "6 players + 4 substitutes",
     prizePool: "₹40,000",
     schedule: "9:00 AM - 6:00 PM",
@@ -99,6 +97,67 @@ const eventsData = [
       "Maximum 2 timeouts per set",
     ],
   },
+  {
+    id: 5,
+    name: "Basketball",
+    details:
+      "Fast-paced basketball tournament featuring 5v5 matches with group stages and playoffs.",
+    date: "March 21-22, 2025",
+    venue: "Basketball Court",
+    image: "/images/basketBall.jpeg",
+    teamSize: "5 players + 3 substitutes",
+    prizePool: "₹45,000",
+    schedule: "10:00 AM - 7:00 PM",
+    description:
+      "Experience high-energy basketball action in this competitive tournament. Teams will showcase their skills in fast breaks, precision shooting, and defensive strategies.",
+    rules: [
+      "FIBA rules apply",
+      "10-minute quarters",
+      "Shot clock of 24 seconds",
+      "Teams must wear matching jerseys",
+      "Maximum 5 team fouls per quarter",
+    ]
+    },
+    {
+    id: 6,
+    name: "Chess",
+    details:
+      "Strategic chess competition with classical format matches and timed rounds.",
+    date: "March 20-21, 2025",
+    venue: "Indoor Sports Complex",
+    image: "/images/chess1.png", // or chess2.png - you can choose which one to use
+    teamSize: "Individual",
+    prizePool: "₹20,000",
+    schedule: "9:00 AM - 4:00 PM",
+    description:
+      "Test your strategic thinking in this classical chess tournament. Players will compete in a series of matches, demonstrating their tactical prowess and endgame skills.",
+    rules: [
+      "FIDE rules apply",
+      "90 minutes per player",
+      "30 seconds increment per move",
+      "Notation mandatory",
+      "Zero tolerance for late arrival",
+    ]
+    },
+    {
+      id: 7,
+      name: "Badminton", 
+      details: "Singles and doubles badminton tournament with knockout format matches.",
+      date: "March 20-22, 2025",
+      venue: "Indoor Sports Complex",
+      image: "/images/badminton.jpg",
+      teamSize: "Singles (1) or Doubles (2)",
+      prizePool: "₹30,000",
+      schedule: "9:00 AM - 5:00 PM",
+      description: "Compete in this thrilling badminton tournament featuring both singles and doubles categories. Players will showcase their agility, precision, and tactical gameplay.",
+      rules: [
+        "BWF rules apply",
+        "21 points per game",
+        "Best of 3 games",
+        "Players must bring own rackets",
+        "Proper sports attire mandatory"
+      ]
+    }
 ];
 
 export default function IndiviEvent() {
@@ -112,7 +171,7 @@ export default function IndiviEvent() {
       <div className={styles.eventContainer}>
         <div
           className={styles.heroSection}
-          style={{ backgroundImage: `url(${event.image})` }}
+          style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${event.image})` }}
         >
           <h1>{event.name}</h1>
         </div>

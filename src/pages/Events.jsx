@@ -9,6 +9,7 @@ const eventsData = [
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
     date: "March 20-22, 2025",
     venue: "Main Ground",
+    image: "/images/football.jpeg"
   },
   {
     id: 2,
@@ -17,14 +18,7 @@ const eventsData = [
       "T20 format cricket tournament with teams representing different colleges competing for the championship.",
     date: "March 21-23, 2025",
     venue: "Cricket Stadium",
-  },
-  {
-    id: 3,
-    name: "Table Tennis",
-    details:
-      "Singles and doubles tournaments with elimination rounds leading to the finals.",
-    date: "March 20-21, 2025",
-    venue: "Indoor Sports Complex",
+    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=1470&h=800"
   },
   {
     id: 4,
@@ -33,7 +27,34 @@ const eventsData = [
       "Inter-college volleyball championship with group stages and knockout rounds.",
     date: "March 22-23, 2025",
     venue: "Volleyball Court",
+    image: "/images/vollyball.jpeg"
   },
+  {
+    id: 5,
+    name: "Basketball",
+    details:
+      "Fast-paced basketball tournament featuring 5v5 matches with group stages and playoffs.",
+    date: "March 21-22, 2025",
+    venue: "Basketball Court",
+    image: "/images/basketBall.jpeg"
+  },
+  {
+    id: 6,
+    name: "Chess",
+    details:
+      "Strategic chess competition with classical format matches and timed rounds.",
+    date: "March 20-21, 2025",
+    venue: "Indoor Sports Complex",
+    image: "/images/chess1.png"
+  },
+  {
+    id: 7,
+    name: "Badminton",
+    details: "Singles and doubles badminton tournament with knockout format matches.",
+    date: "March 20-22, 2025",
+    venue: "Indoor Sports Complex",
+    image: "/images/badminton.jpg"
+  }
 ];
 
 export default function Events() {
@@ -49,6 +70,11 @@ export default function Events() {
           <div
             key={event.id}
             className={styles.eventCard}
+            style={{ 
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${event.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
             data-aos="fade-left"
             data-aos-duration="700"
             data-aos-delay={index * 200}
