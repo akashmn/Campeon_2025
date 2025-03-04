@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.content}>
-        <h1 className={styles.title}>About CAMPION</h1>
+        <h1 className={styles.title}>About CAMPEON</h1>
         <div className={styles.innercontent}>
           <div className={styles.highlightSection}>
             <p className={styles.cardText}>

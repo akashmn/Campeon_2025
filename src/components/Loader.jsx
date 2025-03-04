@@ -7,7 +7,7 @@ export default function Loader({ className }) {
         className === "loaderHidden" ? styles.loaderHidden : ""
       }`}
     >
-      <h1 className={styles.loaderText}>CAMPION</h1>
+      <h1 className={styles.loaderText}>CAMPEON</h1>
     </div>
   );
 }

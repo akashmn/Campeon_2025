@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <div className={styles.layout}>
       <nav className={styles.navbar}>
-        <div className={styles.logo}>CAMPION</div>
+        <div className={styles.logo}>CAMPEON</div>
         <div className={styles.navLinks}>
           <Link to="/">Home</Link>
           <Link to="/events">Events</Link>
