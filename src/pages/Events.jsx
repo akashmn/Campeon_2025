@@ -18,7 +18,7 @@ const eventsData = [
       "T20 format cricket tournament with teams representing different colleges competing for the championship.",
     date: "March 21-23, 2025",
     venue: "Cricket Stadium",
-    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=1470&h=800"
+    image: "/images/cricket.png"
   },
   {
     id: 4,
