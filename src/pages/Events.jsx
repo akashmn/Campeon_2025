@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const eventsData = [
   {
     id: 1,
-    name: "7's Football",
+    name: "5's Football",
     details:
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
     date: "March 8-9, 2025",
