@@ -16,19 +16,19 @@ export default function About() {
             
             <div className={styles.stats}>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>20+</div>
+                <div className={styles.statNumber}>15+</div>
                 <div className={styles.statLabel}>Colleges</div>
               </div>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>4</div>
+                <div className={styles.statNumber}>6</div>
                 <div className={styles.statLabel}>Sports</div>
               </div>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>500+</div>
+                <div className={styles.statNumber}>400+</div>
                 <div className={styles.statLabel}>Athletes</div>
               </div>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>₹1L+</div>
+                <div className={styles.statNumber}>39K+</div>
                 <div className={styles.statLabel}>Prize Pool</div>
               </div>
             </div>

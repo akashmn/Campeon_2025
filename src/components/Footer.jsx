@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className={styles.footerLinks}>
-            {["Home", "Events", "About", "Leaderboard", "FAQ"].map((link) => (
+            {["Home", "Events", "About"].map((link) => (
               <Link
                 key={link}
                 to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
@@ -63,7 +63,7 @@ export default function Footer() {
               data-aos-delay="300"
             >
               <Mail size={14} className={styles.contactIcon} />
-              <span>contact@campeon.com</span>
+              <span>campeoncec@gmail.com</span>
             </div>
             <div
               className={styles.contactItem}
@@ -71,7 +71,7 @@ export default function Footer() {
               data-aos-delay="400"
             >
               <Phone size={14} className={styles.contactIcon} />
-              <span>+91 123 456 7890</span>
+              <span>+91 7356511419</span>
             </div>
             <div
               className={styles.contactItem}
@@ -79,7 +79,7 @@ export default function Footer() {
               data-aos-delay="500"
             >
               <MapPin size={14} className={styles.contactIcon} />
-              <span>Main Stadium, Sports Complex, Kerala</span>
+              <span>College of Engineering, Chengannur</span>
             </div>
           </div>
         </div>
