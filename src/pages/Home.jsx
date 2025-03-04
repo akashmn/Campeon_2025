@@ -28,7 +28,7 @@ export default function Home() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>CAMPEON</h1>
           <p className={styles.subtitle}>INTERCOLLEGE SPORTS TOURNAMENT</p>
-          <Countdown targetDate="2025-03-20T00:00:00" />
+          <Countdown targetDate="2025-03-08T00:00:00" />
         </div>
       </div>
       <About />
