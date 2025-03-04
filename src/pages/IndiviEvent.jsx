@@ -98,7 +98,7 @@ const eventsData = [
     description:
       "Join the excitement of competitive volleyball where teams battle for supremacy. Experience powerful spikes, strategic plays, and amazing teamwork in this high-energy tournament.",
     rules: [
-      "A team should minimum consist of 8 players (5+3) to a maximum of 12 players",
+      "A team should minimum consist of 10 players (6 playing + 4 substitutes)",
       "Players must bring their college ID for verification",
       "Teams should report at the venue at 9:00am, late teams will be disqualified",
       "The tournament will be conducted under knock-out basis",
