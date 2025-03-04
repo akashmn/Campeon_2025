@@ -16,11 +16,11 @@ const eventsData = [
     name: "7's Football",
     details:
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
-    date: "March 20-22, 2025",
+    date: "March 8-9, 2025",
     venue: "Main Ground",
     image: "/images/football.jpeg",
     teamSize: "7 players + 3 substitutes",
-    prizePool: "₹50,000",
+    prizePool: "₹8,000",
     schedule: "9:00 AM - 6:00 PM",
     description:
       "Experience the thrill of fast-paced football action in our prestigious 7's tournament. Teams will compete in a knockout format, showcasing their skills and tactical prowess. With shorter halves and a smaller field, expect intense matches and spectacular goals.",
@@ -31,13 +31,14 @@ const eventsData = [
       "Direct elimination format",
       "Standard FIFA rules apply",
     ],
+    registrationLink:null
   },
   {
     id: 2,
     name: "County Cricket",
     details:
       "T20 format cricket tournament with teams representing different colleges.",
-    date: "March 21-23, 2025",
+    date: "March 8-9, 2025",
     venue: "Cricket Stadium",
     image: "/images/cricket.png",
     teamSize: "11 players + 3 substitutes",
@@ -59,35 +60,36 @@ const eventsData = [
       "CHUCKING RESULTS IN NO-BALL",
       "UMPIRES DECISION IS FINAL",
     ],
+    registrationLink:"https://bit.ly/Cricket_campeon"
   },
-  {
-    id: 3,
-    name: "Table Tennis",
-    details:
-      "Singles and doubles tournaments with elimination rounds leading to the finals.",
-    date: "March 20-21, 2025",
-    venue: "Indoor Sports Complex",
-    image:
-      "https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=1470&h=800",
-    teamSize: "Singles (1) or Doubles (2)",
-    prizePool: "₹25,000",
-    schedule: "10:00 AM - 5:00 PM",
-    description:
-      "Test your skills in this fast-paced table tennis tournament. Both singles and doubles categories available. Players will compete in a series of matches showcasing precision, reflexes, and tactical gameplay.",
-    rules: [
-      "ITTF rules apply",
-      "11 points per game",
-      "Best of 5 games",
-      "Players must bring own rackets",
-      "White playing attire mandatory",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   name: "Table Tennis",
+  //   details:
+  //     "Singles and doubles tournaments with elimination rounds leading to the finals.",
+  //   date: "March 20-21, 2025",
+  //   venue: "Indoor Sports Complex",
+  //   image:
+  //     "https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=1470&h=800",
+  //   teamSize: "Singles (1) or Doubles (2)",
+  //   prizePool: "₹25,000",
+  //   schedule: "10:00 AM - 5:00 PM",
+  //   description:
+  //     "Test your skills in this fast-paced table tennis tournament. Both singles and doubles categories available. Players will compete in a series of matches showcasing precision, reflexes, and tactical gameplay.",
+  //   rules: [
+  //     "ITTF rules apply",
+  //     "11 points per game",
+  //     "Best of 5 games",
+  //     "Players must bring own rackets",
+  //     "White playing attire mandatory",
+  //   ],
+  // },
   {
     id: 4,
     name: "Volleyball",
     details:
       "Inter-college volleyball championship with group stages and knockout rounds.",
-    date: "March 22-23, 2025",
+    date: "March 8-9, 2025",
     venue: "Volleyball Court",
     image: "/images/vollyball.jpeg",
     teamSize: "6 players + 4 substitutes",
@@ -109,11 +111,11 @@ const eventsData = [
     name: "Basketball",
     details:
       "Fast-paced basketball tournament featuring 5v5 matches with group stages and playoffs.",
-    date: "March 21-22, 2025",
+    date: "March 8-9, 2025",
     venue: "Basketball Court",
     image: "/images/basketBall.jpeg",
     teamSize: "5 players + 3 substitutes",
-    prizePool: "₹45,000",
+    prizePool: "₹7,000",
     schedule: "10:00 AM - 7:00 PM",
     description:
       "Experience high-energy basketball action in this competitive tournament. Teams will showcase their skills in fast breaks, precision shooting, and defensive strategies.",
@@ -123,18 +125,19 @@ const eventsData = [
       "Shot clock of 24 seconds",
       "Teams must wear matching jerseys",
       "Maximum 5 team fouls per quarter",
-    ]
+    ],
+    registrationLink: "https://bit.ly/Basketballcampeon"
     },
     {
     id: 6,
     name: "Chess",
     details:
       "Strategic chess competition with classical format matches and timed rounds.",
-    date: "March 20-21, 2025",
+    date: "March 8-9, 2025",
     venue: "Indoor Sports Complex",
     image: "/images/chess1.png", // or chess2.png - you can choose which one to use
     teamSize: "Individual",
-    prizePool: "₹20,000",
+    prizePool: "₹2,500",
     schedule: "9:00 AM - 4:00 PM",
     description:
       "Test your strategic thinking in this classical chess tournament. Players will compete in a series of matches, demonstrating their tactical prowess and endgame skills.",
@@ -144,17 +147,18 @@ const eventsData = [
       "30 seconds increment per move",
       "Notation mandatory",
       "Zero tolerance for late arrival",
-    ]
+    ],
+    registrationLink:"https://bit.ly/QG_Chess"
     },
     {
       id: 7,
       name: "Badminton", 
       details: "Singles and doubles badminton tournament with knockout format matches.",
-      date: "March 20-22, 2025",
+      date: "March 8-9, 2025",
       venue: "Indoor Sports Complex",
       image: "/images/badminton.jpg",
       teamSize: "Minimum 4, Maximum 5 players",
-      prizePool: "₹30,000",
+      prizePool: "₹8,000",
       schedule: "8:00 AM - 5:00 PM",
       description: "Compete in this thrilling badminton tournament featuring both singles and doubles categories. Players will showcase their agility, precision, and tactical gameplay.",
       rules: [
@@ -166,7 +170,8 @@ const eventsData = [
         "Teams should report at venue at 8:00am",
         "Tournament conducted under knock-out basis",
         "Event committee/referee decisions are final"
-      ]
+      ],
+      registrationLink:"https://bit.ly/Campeon_badminton"
     }
 ];
 

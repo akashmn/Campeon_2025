@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </div>
       <About />
-      <LatestUpdates/>
+      {/* <LatestUpdates/> */}
       <FAQ />
     </>
   );
