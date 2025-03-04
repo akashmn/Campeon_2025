@@ -126,7 +126,7 @@ const eventsData = [
     date: "March 8-9, 2025",
     venue: "Basketball Court",
     image: "/images/basketBall.jpeg",
-    teamSize: "5 players + 3 substitutes",
+    teamSize: "5 players + 7 substitutes",
     prizePool: "₹7,000",
     schedule: "10:00 AM - 7:00 PM",
     description:
