@@ -154,11 +154,13 @@ const eventsData = [
     description:
       "Test your strategic thinking in this classical chess tournament. Players will compete in a series of matches, demonstrating their tactical prowess and endgame skills.",
     rules: [
-      "FIDE rules apply",
-      "90 minutes per player",
-      "30 seconds increment per move",
-      "Notation mandatory",
-      "Zero tolerance for late arrival",
+      "Limited entries available.",
+    "Open only for college students.",
+    "Reporting Time - 09:30 AM.",
+    "No spot entry allowed.",
+    "College ID is required for verification.",
+    "Latest FIDE rules will be applicable & arbiter decision will be final.",
+    "Time Control: 15 minutes + 5 seconds.",
     ],
     registrationLink:"https://bit.ly/QG_Chess"
     },
