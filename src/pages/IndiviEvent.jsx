@@ -18,8 +18,7 @@ const eventsData = [
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
     date: "March 20-22, 2025",
     venue: "Main Ground",
-    image:
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1470&h=800",
+    image: "/images/football.jpeg",
     teamSize: "7 players + 3 substitutes",
     prizePool: "₹50,000",
     schedule: "9:00 AM - 6:00 PM",
@@ -40,19 +39,25 @@ const eventsData = [
       "T20 format cricket tournament with teams representing different colleges.",
     date: "March 21-23, 2025",
     venue: "Cricket Stadium",
-    image:
-      "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=1470&h=800",
-    teamSize: "11 players + 4 substitutes",
-    prizePool: "₹75,000",
+    image: "/images/cricket.png",
+    teamSize: "11 players + 3 substitutes",
+    prizePool: "₹8,000",
     schedule: "8:00 AM - 7:00 PM",
     description:
-      "Join us for an action-packed T20 cricket tournament where colleges battle for supreme cricket glory. Experience the excitement of quick-fire batting, tactical bowling, and electric fielding performances.",
+      "Join us for an action-packed cricket tournament where colleges battle for supreme cricket glory. Experience the excitement of quick-fire batting, tactical bowling, and electric fielding performances.",
     rules: [
-      "20 overs per innings",
-      "Power play regulations apply",
-      "DLS method for rain interruptions",
-      "ICC standard playing conditions",
-      "College ID mandatory",
+      "5-OVER MATCH",
+      "SLOW BOWLING WITHOUT RUN-UP",
+      "BATSMAN CAN APPEAL FOR SPEEDBALL",
+      "SIX IS OUT",
+      "SIX IN NO-BALL IS OUT",
+      "FREE HIT WILL NOT BE AWARDED FOR NO-BALL",
+      "NO LBW",
+      "OVERTHROW ALLOWED",
+      "NO BYES",
+      "MAXIMUM 2 OVERS CAN BE BOWLED BY A BOWLER",
+      "CHUCKING RESULTS IN NO-BALL",
+      "UMPIRES DECISION IS FINAL",
     ],
   },
   {
@@ -84,21 +89,85 @@ const eventsData = [
       "Inter-college volleyball championship with group stages and knockout rounds.",
     date: "March 22-23, 2025",
     venue: "Volleyball Court",
-    image:
-      "https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=1470&h=800",
+    image: "/images/vollyball.jpeg",
     teamSize: "6 players + 4 substitutes",
-    prizePool: "₹40,000",
+    prizePool: "₹6,000",
     schedule: "9:00 AM - 6:00 PM",
     description:
       "Join the excitement of competitive volleyball where teams battle for supremacy. Experience powerful spikes, strategic plays, and amazing teamwork in this high-energy tournament.",
     rules: [
-      "FIVB rules apply",
-      "25 points per set",
-      "Best of 3 sets",
-      "Teams must wear matching uniforms",
-      "Maximum 2 timeouts per set",
+      "A team should minimum consist of 8 players (5+3) to a maximum of 12 players",
+      "Players must bring their college ID for verification",
+      "Teams should report at the venue at 9:00am, late teams will be disqualified",
+      "The tournament will be conducted under knock-out basis",
+      "Decisions taken by the event committee and the referees will be final",
     ],
+    registrationLink: "https://bit.ly/campeonvolleyball"
   },
+  {
+    id: 5,
+    name: "Basketball",
+    details:
+      "Fast-paced basketball tournament featuring 5v5 matches with group stages and playoffs.",
+    date: "March 21-22, 2025",
+    venue: "Basketball Court",
+    image: "/images/basketBall.jpeg",
+    teamSize: "5 players + 3 substitutes",
+    prizePool: "₹45,000",
+    schedule: "10:00 AM - 7:00 PM",
+    description:
+      "Experience high-energy basketball action in this competitive tournament. Teams will showcase their skills in fast breaks, precision shooting, and defensive strategies.",
+    rules: [
+      "FIBA rules apply",
+      "10-minute quarters",
+      "Shot clock of 24 seconds",
+      "Teams must wear matching jerseys",
+      "Maximum 5 team fouls per quarter",
+    ]
+    },
+    {
+    id: 6,
+    name: "Chess",
+    details:
+      "Strategic chess competition with classical format matches and timed rounds.",
+    date: "March 20-21, 2025",
+    venue: "Indoor Sports Complex",
+    image: "/images/chess1.png", // or chess2.png - you can choose which one to use
+    teamSize: "Individual",
+    prizePool: "₹20,000",
+    schedule: "9:00 AM - 4:00 PM",
+    description:
+      "Test your strategic thinking in this classical chess tournament. Players will compete in a series of matches, demonstrating their tactical prowess and endgame skills.",
+    rules: [
+      "FIDE rules apply",
+      "90 minutes per player",
+      "30 seconds increment per move",
+      "Notation mandatory",
+      "Zero tolerance for late arrival",
+    ]
+    },
+    {
+      id: 7,
+      name: "Badminton", 
+      details: "Singles and doubles badminton tournament with knockout format matches.",
+      date: "March 20-22, 2025",
+      venue: "Indoor Sports Complex",
+      image: "/images/badminton.jpg",
+      teamSize: "Minimum 4, Maximum 5 players",
+      prizePool: "₹30,000",
+      schedule: "8:00 AM - 5:00 PM",
+      description: "Compete in this thrilling badminton tournament featuring both singles and doubles categories. Players will showcase their agility, precision, and tactical gameplay.",
+      rules: [
+        "A team should consist of minimum 4 players to maximum 5 players",
+        "Only one player from the team is allowed to play in two matches",
+        "Game will be 2 sets: first singles, doubles, then reverse doubles if draw",
+        "Players must bring college ID for verification",
+        "Yonex mavis 350 shuttle will be used",
+        "Teams should report at venue at 8:00am",
+        "Tournament conducted under knock-out basis",
+        "Event committee/referee decisions are final"
+      ]
+    }
 ];
 
 export default function IndiviEvent() {
@@ -112,7 +181,7 @@ export default function IndiviEvent() {
       <div className={styles.eventContainer}>
         <div
           className={styles.heroSection}
-          style={{ backgroundImage: `url(${event.image})` }}
+          style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${event.image})` }}
         >
           <h1>{event.name}</h1>
         </div>
@@ -179,8 +248,22 @@ export default function IndiviEvent() {
           </div>
 
           <button className={styles.registerBtn}>
-            Register Now
-            <Share2 size={18} />
+            {event.registrationLink ? (
+              <a 
+                href={event.registrationLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                Register Now
+                <Share2 size={18} />
+              </a>
+            ) : (
+              <>
+                Register Now
+                <Share2 size={18} />
+              </>
+            )}
           </button>
         </div>
       </div>
