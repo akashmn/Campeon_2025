@@ -7,7 +7,7 @@ const eventsData = [
     name: "7's Football",
     details:
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
-    date: "March 20-22, 2025",
+    date: "March 8-9, 2025",
     venue: "Main Ground",
     image: "/images/football.jpeg"
   },
@@ -16,7 +16,7 @@ const eventsData = [
     name: "County Cricket",
     details:
       "T20 format cricket tournament with teams representing different colleges competing for the championship.",
-    date: "March 21-23, 2025",
+    date: "March 8-9, 2025",
     venue: "Cricket Stadium",
     image: "/images/cricket.png"
   },
@@ -25,7 +25,7 @@ const eventsData = [
     name: "Volleyball",
     details:
       "Inter-college volleyball championship with group stages and knockout rounds.",
-    date: "March 22-23, 2025",
+    date: "March 8-9, 2025",
     venue: "Volleyball Court",
     image: "/images/vollyball.jpeg"
   },
@@ -34,7 +34,7 @@ const eventsData = [
     name: "Basketball",
     details:
       "Fast-paced basketball tournament featuring 5v5 matches with group stages and playoffs.",
-    date: "March 21-22, 2025",
+    date: "March 8-9, 2025",
     venue: "Basketball Court",
     image: "/images/basketBall.jpeg"
   },
@@ -43,7 +43,7 @@ const eventsData = [
     name: "Chess",
     details:
       "Strategic chess competition with classical format matches and timed rounds.",
-    date: "March 20-21, 2025",
+    date: "March 8-9, 2025",
     venue: "Indoor Sports Complex",
     image: "/images/chess1.png"
   },
@@ -51,7 +51,7 @@ const eventsData = [
     id: 7,
     name: "Badminton",
     details: "Singles and doubles badminton tournament with knockout format matches.",
-    date: "March 20-22, 2025",
+    date: "March 8-9, 2025",
     venue: "Indoor Sports Complex",
     image: "/images/badminton.jpg"
   }
