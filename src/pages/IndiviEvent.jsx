@@ -31,7 +31,7 @@ const eventsData = [
       "Direct elimination format",
       "Standard FIFA rules apply",
     ],
-    registrationLink:null
+    registrationLink:"https://forms.gle/V5oEdcvmQHmXVQGS9"
   },
   {
     id: 2,
