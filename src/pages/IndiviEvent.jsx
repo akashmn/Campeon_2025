@@ -13,19 +13,19 @@ import styles from "../styles/IndiviEvent.module.css";
 const eventsData = [
   {
     id: 1,
-    name: "7's Football",
+    name: "5's Football",
     details:
       "High-intensity seven-a-side football tournament featuring knockout rounds and a grand finale.",
     date: "March 8-9, 2025",
     venue: "Main Ground",
     image: "/images/football.jpeg",
-    teamSize: "7 players + 3 substitutes",
+    teamSize: "5 players + 3 substitutes",
     prizePool: "₹8,000",
     schedule: "9:00 AM - 6:00 PM",
     description:
       "Experience the thrill of fast-paced football action in our prestigious 7's tournament. Teams will compete in a knockout format, showcasing their skills and tactical prowess. With shorter halves and a smaller field, expect intense matches and spectacular goals.",
     rules: [
-      "7 players per side on field",
+      "5 players per side on field",
       "20 minutes per half",
       "Rolling substitutions allowed",
       "Direct elimination format",
