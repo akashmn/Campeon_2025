@@ -44,8 +44,10 @@ export default function LatestUpdates() {
     );
   };
 
-  if (loading) return <div className="loading">Loading...</div>;
-  if (error) return <div className="error">{error}</div>;
+  //   if (loading) return <div className="loading">Loading...</div>;
+  if (loading) return <div className="loading"></div>;
+  if (error) return <div className="error"></div>;
+  //   if (error) return <div className="error">{error}</div>;
 
   return (
     <div className="latest-updates">

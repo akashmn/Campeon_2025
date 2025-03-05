@@ -1,5 +1,6 @@
 .faqSection {
   padding: 6rem 2rem;
+  padding-top: 3rem;
   background: linear-gradient(0deg, rgba(9, 9, 16, 0.98), rgba(0, 0, 0, 0.95));
   position: relative;
   overflow: hidden;
