@@ -1,70 +1,107 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import client from "../sanity/sanityClient";
 import "../styles/LatestUpdates.css";
 
 export default function LatestUpdates() {
-    const updates = [
-        { id: 0, sport: "County Cricket", team1: "St. Thomas", team2: "College of Engineering Chengannur", score: "53/5 | 35/6", over: "(5.0) | (4.4)", result: "College of Engineering Chengannur", venue: "College Ground", time: "03:01pm" },
-        { id: 1, sport: "7's Football", team1: "Saintgits College", team2: "Providence Chengannur", score: "", over: "", result: "", venue: "Saintgits Sports Arena", time: "02:31pm" },
-        { id: 2, sport: "Basketball", team1: "St. Mary's", team2: "Kristhu Jyothi, Kottayam", score: "31 - 35", over: "", result: "Kristhu Jyothi, Kottayam", venue: "St. Mary's Indoor Stadium", time: "02:15pm" },
-        { id: 3, sport: "Table Tennis", team1: "St. Mary's", team2: "Kristhu Jyothi, Kottayam", score: "31 - 35", over: "", result: "Kristhu Jyothi, Kottayam", venue: "St. Mary's Indoor Stadium", time: "02:15pm" },
-        { id: 4, sport: "VolleyBall", team1: "St. Mary's", team2: "Kristhu Jyothi, Kottayam", score: "", over: "", result: "", venue: "St. Mary's Indoor Stadium", time: "02:15pm" }
-    ];
+  const [updates, setUpdates] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const colors = ["lime", "pink", "yellow", "red", "blue"];
 
-    const [visibleCount, setVisibleCount] = useState(3);
-    const colors = ['lime', 'pink', 'yellow', 'red', 'blue'];
-    const loadMore = () => setVisibleCount((prev) => prev + 5);
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "sportsUpdate"] | order(_createdAt desc)`)
+      .then((data) => {
+        console.log("Fetched data:", data);
+        setUpdates(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Sanity fetch error:", err);
+        setError("Failed to fetch updates. Please try again later.");
+        setLoading(false);
+      });
+  }, []);
 
+  const loadMore = () => setVisibleCount((prev) => prev + 5);
+
+  const renderCricketScore = (score, over) => {
+    const scores = score.split(" | ");
+    const overs = over.split(" | ");
     return (
-        <div className="latest-updates">
-            <h1 className="title">LATEST UPDATES</h1>
-            <div className="updates-container">
-                {updates.slice(0, visibleCount).map((update) => (
-                    <div key={update.id} className="card">
-                        <div className="update-card">
-                            <div className="update-header">
-                                <span className={`sport ${colors[update.id]}`}>{update.sport}</span>
-                                <span className="time">{update.time}</span>
-                            </div>
-                            <hr />
-                            <div className="mid">
-                                <span className="match">{update.team1} <div className="score-card">
-                                <span className="score-card-head">Score</span>
-                                {update.score && update.id !== 0 ? (
-                                    <span className="score">{update.score}</span>
-                                ) : update.score ? (
-                                    (() => {
-                                        let score = update.score.split(' | ');
-                                        let over = update.over.split(' | ');
-                                        return <div className="cricket-score">
-                                            <div className="cricket-end">
-                                                <span className="runs">{score[0]}</span>
-                                                <span className="over">{over[0]}</span>
-                                            </div>
-                                            <span>|</span>
-                                            <div className="cricket-end">
-                                                <span className="runs">{score[1]}</span>
-                                                <span className="over">{over[1]}</span>
-                                            </div>
-                                        </div>;
-                                    })()
-                                ) : (
-                                    <span className="on-going">VS</span>
-                                )
-
-                                }
-                            </div> {update.team2}</span>
-                                <span className="venue">{update.venue}</span>
-                            </div>
-                            
-                            {update.result ? <span className={`winner ${colors[update.id]}`}>Winner: {update.result}</span> : <span className="Tba">Winner Will Be Announced Soon!</span>}
-                        </div>
-
-                    </div>
-                ))}
-            </div>
-            {visibleCount < updates.length && (
-                <button className="view-more" onClick={loadMore}>View More</button>
-            )}
+      <div className="cricket-score">
+        <div className="cricket-end">
+          <span className="runs">{scores[0]}</span>
+          <span className="over">{overs[0]}</span>
         </div>
+        <span>|</span>
+        <div className="cricket-end">
+          <span className="runs">{scores[1]}</span>
+          <span className="over">{overs[1]}</span>
+        </div>
+      </div>
     );
+  };
+
+  //   if (loading) return <div className="loading">Loading...</div>;
+  if (loading) return <div className="loading"></div>;
+  if (error) return <div className="error"></div>;
+  //   if (error) return <div className="error">{error}</div>;
+
+  return (
+    <div className="latest-updates">
+      <h1 className="title">LATEST UPDATES</h1>
+      <div className="updates-container">
+        {updates.slice(0, visibleCount).map((update, index) => (
+          <div key={update._id} className="card">
+            <div className="update-card">
+              <div className="update-header">
+                <span className={`sport ${colors[index % colors.length]}`}>
+                  {update.sport}
+                </span>
+                <span className="time">{update.time}</span>
+              </div>
+              <hr />
+              <div className="mid">
+                <span className="match">
+                  {update.team1}
+                  <div className="score-card">
+                    <span className="score-card-head">Score</span>
+                    {update.score ? (
+                      update.sport === "County Cricket" ? (
+                        renderCricketScore(update.score, update.over)
+                      ) : (
+                        <span className="score">{update.score}</span>
+                      )
+                    ) : (
+                      <span className="on-going">VS</span>
+                    )}
+                  </div>
+                  {update.team2}
+                </span>
+                <span className="venue">{update.venue}</span>
+              </div>
+              {update.result ? (
+                <span className={`winner ${colors[index % colors.length]}`}>
+                  Winner: {update.result}
+                </span>
+              ) : (
+                <span className="Tba">Winner Will Be Announced Soon!</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      {visibleCount < updates.length && (
+        <button
+          className="view-more"
+          onClick={loadMore}
+          aria-label="Load more updates"
+        >
+          View More
+        </button>
+      )}
+    </div>
+  );
 }
